@@ -1,23 +1,43 @@
 import logo from './logo.svg';
+import React from 'react'
 import './App.css';
+import { Weather } from './components/Weather';
+import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
+const [input,setInput] = React.useState('')
+const  [city,setCity] = React.useState('')
+
+const changeHandler = (e) => {
+  setInput(e.target.value)
+}
+
+const submitHandler = (e) => {
+  e.preventDefault();
+  setCity(input);
+}
+
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+     
+     <div className='forms'>
+     <form className='formSubmit'style={{width:'270px'}} onSubmit={submitHandler}>
+      <input
+          className='form-control'
+         placeholder='city name :' 
+         value={input} 
+         onChange={changeHandler}
+         />
+         <button className='btn btn-primary' type='submit'>SUBMIT</button>
+
+       
+      </form>
+     </div>
+      
+      
+     
+      {city && <Weather name={city}/>}
     </div>
   );
 }

@@ -1,10 +1,32 @@
 .App {
   text-align: center;
+  height: 100vh;
+  background-color: black;
 }
+
+
+
+button{
+  background-color: wheat  !important;
+  border-color: wheat !important;
+  color: black !important;
+  font-family: serif !important;
+}
+
 
 .App-logo {
   height: 40vmin;
   pointer-events: none;
+}
+
+.formSubmit{
+  display: flex;
+  justify-content: center;
+}
+.forms{
+  display: flex;
+  justify-content: center;
+  padding-top: 30px;
 }
 
 @media (prefers-reduced-motion: no-preference) {

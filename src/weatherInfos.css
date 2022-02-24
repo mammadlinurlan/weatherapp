@@ -1,0 +1,10 @@
+.weatherInfos h2{
+  color: wheat;
+  margin-top: 10px;
+  font-family: serif;
+}
+.weatherInfos img{
+    transform: scale(1.2);
+    margin-top: 10px;
+}
+
