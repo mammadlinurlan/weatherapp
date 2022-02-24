@@ -9,7 +9,6 @@ export const Weather = ({name}) => {
         setStatus("LOADING");
         axios.get(`http://api.weatherapi.com/v1/current.json?key=b6182a124a1b43b89a3151355222402&q=${name}&aqi=no`)
         .then((res)=>{
-            console.log(res.data)
             setWeatherInfo(res.data);
             setStatus("SUCCESS");
         })
